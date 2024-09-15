@@ -1,0 +1,289 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="Stylesheet" href="imageslidermaker.css" />
+    <link href="Styles/one.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/java1.js" type="text/javascript"></script>
+    <script src="bjqs-1.3-imageslidermaker.js"></script>
+    <script>
+        $(function () {
+            $("#imageslider").bjqs({
+                width: 1080,
+                height: 330,
+                animtype: "fade",
+                responsive: false,
+                automatic: true,
+                keyboardnav: false,
+                markertype: "1",
+                prevtext: "Prev",
+                nexttext: "Next"
+            });
+        });
+    </script>
+    <script src="js/coin-slider.min.js" type="text/javascript"></script>
+    <script src="js/cufon-yui.js" type="text/javascript"></script>
+    <script src="js/cufon-aller-700.js" type="text/javascript"></script>
+    <script src="js/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+    <style type="text/css">
+        .tabular
+        {
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+        }
+        
+        .intabular
+        {
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            background-color: White;
+            margin-bottom: 0px;
+        }
+        
+        .button
+        {
+            height: 45px;
+            width: 140px;
+            border-color: #015987;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border: 1px solid #015987;
+            background-color: white;
+            font-size: 16px;
+            font-weight: bold;
+            font-family: Calibri;
+        }
+        
+        .button:hover
+        {
+            box-shadow: 0 0 5px #015987;
+        }
+        
+        .heading
+        {
+            font-family: Bell MT;
+            font-size: 28px;
+            color: #015987;
+        }
+        
+        .label
+        {
+            font-family: Calibri;
+            font-size: 19px;
+            color: Black;
+        }
+        
+        .txt
+        {
+            -webkit-transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+            font-size: 19px;
+            font-family: Calibri;
+            padding: 8px 8px 8px 8px;
+            border: 1px solid #DDDDDD;
+        }
+        
+        .txt:focus
+        {
+            box-shadow: 0 0 5px #015987;
+            padding: 8px 8px 8px 8px;
+            border: 1px solid #015987;
+        }
+        .nav:hover ul li ul li
+        {
+            float: none;
+        }
+    </style>
+    <style type="text/css">
+        .tabular
+        {
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+        }
+        .ATMtabular
+        {
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            background-image: url(images/ATM.jpg);
+            height: 300;
+        }
+        .intabular
+        {
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            background-color: White;
+            margin-bottom: 0px;
+        }
+        .sidebar
+        {
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            background-color: White;
+        }
+    </style>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <style type="text/css">
+        ._css3m
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body style="background-image: url('images/Grey-website-background.jpg')">
+    <form id="form1" runat="server">
+    <div>
+        <center>
+            <asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+            <table class="tabular" width="80%">
+                <tr>
+                    <td colspan="2">
+                        <asp:Panel ID="Panel1" runat="server" Visible="false">
+                            <div>
+                                <ul id="css3menu1" class="topmenu">
+                                    <input type="checkbox" id="css3menu-switcher" class="switchbox"><label onclick=""
+                                        class="switch" for="css3menu-switcher"></label>
+                                    <li class="topmenu"><a href="#" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                        Home</a></li>
+                                    <li class="topmenu"><a href="#" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                        About Us</a></li>
+                                    <li class="topmenu"><a href="#" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                        Contact Us</a></li>
+                                    <li class="toplast"><a href="Login.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                        Login</a></li>
+                                </ul>
+                            </div>
+                        </asp:Panel>
+                        <asp:Panel ID="Panel2" runat="server" Visible="False">
+                            <ul id="css3menu1" class="topmenu">
+                                <input type="checkbox" id="Checkbox1" class="switchbox"><label onclick="" class="switch"
+                                    for="css3menu-switcher"></label>
+                                <li class="topmenu"><a href="MyProf.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    My Profile</a></li>
+                                <li class="topmenu"><a href="Marks.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    My Documents</a></li>
+                                <li class="topmenu"><a href="SBal.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    Add Balance</a></li>
+                                <li class="topmenu"><a href="user_trans.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">Transactions</a></li>
+                                <li class="toplast"><a href="Logout.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    Logout</a></li>
+                            </ul>
+                        </asp:Panel>
+                        <asp:Panel ID="Panel3" runat="server" Visible="False">
+                            <ul id="css3menu1" class="topmenu">
+                                <input type="checkbox" id="Checkbox2" class="switchbox"><label onclick="" class="switch"
+                                    for="css3menu-switcher"></label>
+                                <li class="topmenu"><a href="CReg.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    Add Student</a></li>
+                                <li class="topmenu"><a href="AddBal.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    Add Balance</a></li>
+                                <li class="topmenu"><a href="AddMarks.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">Add Documents</a></li>
+                                <li class="topmenu"><a href="View.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    View Student Profile</a></li>
+                                <li class="toplast"><a href="Logout.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    Logout</a></li>
+                            </ul>
+                        </asp:Panel>
+                        <asp:Panel ID="Can" runat="server" Visible="False">
+                            <ul id="css3menu1" class="topmenu">
+                                <input type="checkbox" id="Checkbox6" class="switchbox"><label onclick="" class="switch"
+                                    for="css3menu-switcher"></label>
+                                <li class="topmenu"><a href="New_Transaction.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">New Transaction</a></li>
+                                <li class="topmenu"><a href="View_Trans.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">View Transaction</a></li>
+                                <li class="topmenu"><a href="Change_Pass.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">Change Password</a></li>
+                                <li class="toplast"><a href="Logout.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    Logout</a></li>
+                            </ul>
+                        </asp:Panel>
+                        <asp:Panel ID="Lib" runat="server" Visible="False">
+                            <ul id="css3menu1" class="topmenu">
+                                <input type="checkbox" id="Checkbox4" class="switchbox"><label onclick="" class="switch"
+                                    for="css3menu-switcher"></label>
+                                <li class="topmenu"><a href="New_Transaction.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">New Transaction</a></li>
+                                <li class="topmenu"><a href="View_Trans.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">View Transaction</a></li>
+                                <li class="topmenu"><a href="Change_Pass.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">Change Password</a></li>
+                                <li class="toplast"><a href="Logout.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    Logout</a></li>
+                            </ul>
+                        </asp:Panel>
+                        <asp:Panel ID="Stat" runat="server" Visible="False">
+                            <ul id="css3menu1" class="topmenu">
+                                <input type="checkbox" id="Checkbox3" class="switchbox"><label onclick="" class="switch"
+                                    for="css3menu-switcher"></label>
+                                <li class="topmenu"><a href="New_Transaction.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">New Transaction</a></li>
+                                <li class="topmenu"><a href="View_Trans.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">View Transaction</a></li>
+                                <li class="topmenu"><a href="Change_Pass.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">Change Password</a></li>
+                                <li class="toplast"><a href="Logout.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    Logout</a></li>
+                            </ul>
+                        </asp:Panel>
+                        <asp:Panel ID="Office" runat="server" Visible="False">
+                            <ul id="css3menu1" class="topmenu">
+                                <input type="checkbox" id="Checkbox5" class="switchbox"><label onclick="" class="switch"
+                                    for="css3menu-switcher"></label>
+                                <li class="topmenu"><a href="View.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    View Student Profile</a></li>
+                                <li class="topmenu"><a href="New_Transaction.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">New Transaction</a></li>
+                                <li class="topmenu"><a href="View_Trans.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">View Transaction</a></li>
+                                <li class="topmenu"><a href="Change_Pass.aspx" style="height: 16px; font-size: 15px;
+                                    line-height: 16px;">Change Password</a></li>
+                                <li class="toplast"><a href="Logout.aspx" style="height: 16px; font-size: 15px; line-height: 16px;">
+                                    Logout</a></li>
+                            </ul>
+                        </asp:Panel>
+                        <img src="images/smartcard.jpg" width="100%" height="300px" class="intabular" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="intabular" colspan="2">
+                        <center>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                <p>
+                                    <br />
+                                </p>
+                            </asp:ContentPlaceHolder>
+                        </center>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="background-color: #474747; color: #FFFFFF;" bgcolor="Aqua"
+                        align="right" class="intabular">
+                        College Smart Card&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+    </form>
+</body>
+</html>
